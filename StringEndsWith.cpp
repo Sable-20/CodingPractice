@@ -13,9 +13,6 @@ Output: false
 #include <string>
 bool solution(std::string const &str, std::string const &ending)
 {
-  if (ending.size() > str.size())
-  {
-    return false;
-  }
-  return str.compare(str.size() - ending.size(), ending.size(), ending) == 0;
+  return str.size() > ending.size() &&
+         (str.compare(str.size() - ending.size(), ending.size(), ending) == 0);
 }
