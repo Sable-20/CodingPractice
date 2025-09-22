@@ -1,0 +1,14 @@
+#include <vector>
+#include <numeric>
+
+/*
+Write a function which calculates the average of the numbers in a given array.
+
+Note: Empty arrays should return 0.
+
+*/
+
+double calcAverage(const std::vector<int> &values)
+{
+  return std::accumulate(values.begin(), values.end(), 0.0) / values.size();
+}
